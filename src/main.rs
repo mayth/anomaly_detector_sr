@@ -196,7 +196,7 @@ mod tests {
 
     #[test]
     fn test_read_data() {
-        let data = "\"Time\",\"value\"\n2024-11-21 04:30:00,67553\n2024-11-21 04:32:00,18875\n2024-11-21 04:34:00,0".to_string();
+        let data = "\"Time\",\"value\"\n1732163400000,67553\n1732163520000,18875\n1732163640000,0".to_string();
         let cursor = io::Cursor::new(data);
         let input = Box::new(io::BufReader::new(cursor));
         let result = read_data(input);
