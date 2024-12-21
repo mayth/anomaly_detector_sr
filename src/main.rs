@@ -84,7 +84,7 @@ fn detect(data: &[DataPoint], q: usize, z: usize, t: DataPoint, m: usize, k: usi
     let n = data.len();
     let data = extrapolate(data, m, k);
     // cut the extrapolated points
-    let saliency_map = calculate_saliency_map(&data, q)[k..(n+k-1)].to_vec();
+    let saliency_map = calculate_saliency_map(&data, q)[k..(n+k)].to_vec();
     let score = calculate_score(&saliency_map, z);
     let result = score.iter().map(|&x| x > t).collect();
     (saliency_map, score, result)
