@@ -1,0 +1,15 @@
+[project]
+name = "drawer"
+version = "0.1.0"
+description = "draw graph of result of anomaly detection"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.9.2",
+    "pandas>=2.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+]
